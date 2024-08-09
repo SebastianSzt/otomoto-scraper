@@ -1,0 +1,42 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+  background-color: #333;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.car-card {
+  display: flex;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  overflow: hidden;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.car-image img {
+  width: 200px;
+  height: auto;
+  object-fit: cover;
+}
+
+.car-details {
+  padding: 20px;
+  flex: 1;
+}
+
+.car-details h2 {
+  margin-top: 0;
+}
+
+.car-details p {
+  margin: 5px 0;
+}
+
+.car-details p strong {
+  color: #333;
+}

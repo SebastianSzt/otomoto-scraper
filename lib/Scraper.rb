@@ -49,7 +49,7 @@ class Scraper
       car_data = {
         brand: @brand,
         model: @model,
-        img: car.xpath('.//div[1]//img[1]').attr('src'),
+        img: car.xpath('.//div[1]//img[1]').attr('src').to_s.split(';').first,
         title: car.xpath('.//div[2]//h1//a').text,
         engine_capacity: car.xpath('.//div[2]//p').text.split(' • ').first,
         horsepower: car.xpath('.//div[2]//p').text.split(' • ')[1],
