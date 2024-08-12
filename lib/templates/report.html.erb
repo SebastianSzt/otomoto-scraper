@@ -3,27 +3,33 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Car Report</title>
-  <link rel="stylesheet" href="styles.css">
+  <title>List of Cars</title>
+  <style>
+    <%= File.read('lib/templates/styles.css') %>
+  </style>
 </head>
 <body>
-  <h1>Car Report</h1>
+  <h1>List of Cars</h1>
   <% @cars.each do |car| %>
     <div class="car-card">
-      <div class="car-image">
-        <img src="<%= car.img %>" alt="<%= car.title %>">
-      </div>
-      <div class="car-details">
+      <div class="car-header">
         <h2><%= car.brand %> <%= car.model %></h2>
-        <p><strong>Title:</strong> <%= car.title %></p>
-        <p><strong>Engine Capacity:</strong> <%= car.engine_capacity %></p>
-        <p><strong>Horsepower:</strong> <%= car.horsepower %></p>
-        <p><strong>Mileage:</strong> <%= car.mileage %></p>
-        <p><strong>Fuel Type:</strong> <%= car.fuel_type %></p>
-        <p><strong>Gearbox:</strong> <%= car.gearbox %></p>
-        <p><strong>Year:</strong> <%= car.year %></p>
-        <p><strong>Location:</strong> <%= car.location %></p>
-        <p><strong>Price:</strong> <%= car.price %></p>
+        <p class="car-price"><%= car.price %></p>
+      </div>
+      <div class="car-body">
+        <div class="car-image">
+          <img src="<%= car.img %>" alt="<%= car.title %>">
+        </div>
+        <div class="car-details">
+          <p class="car-title"><%= car.title %></p>
+          <p><strong>Engine Capacity:</strong> <%= car.engine_capacity %></p>
+          <p><strong>Horsepower:</strong> <%= car.horsepower %></p>
+          <p><strong>Mileage:</strong> <%= car.mileage %></p>
+          <p><strong>Fuel Type:</strong> <%= car.fuel_type %></p>
+          <p><strong>Gearbox:</strong> <%= car.gearbox %></p>
+          <p><strong>Year:</strong> <%= car.year %></p>
+          <p class="car-location"><%= car.location %></p>
+        </div>
       </div>
     </div>
   <% end %>
