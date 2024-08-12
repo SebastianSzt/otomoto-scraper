@@ -3,6 +3,11 @@ require_relative 'lib/Car'
 require_relative 'lib/CSVGenerator'
 require_relative 'lib/PDFGenerator'
 
+require 'logger'
+
+# Initialize the logger
+logger = Logger.new('error.log')
+
 # Main script to scrape car data, display it, and generate CSV and PDF reports.
 
 # The base URL of the website to scrape.
@@ -31,4 +36,5 @@ begin
 rescue StandardError => e
   # Handle any errors that occur during the scraping or file generation process.
   puts "An error occurred: #{e.message}"
+  logger.error("An error occurred: #{e.message}\n#{e.backtrace.join("\n")}")
 end
