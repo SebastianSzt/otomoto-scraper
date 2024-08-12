@@ -38,7 +38,11 @@ GEM
       stringio
       time
       uri
+    psych (5.1.2)
+      stringio
     racc (1.8.1)
+    rdoc (6.7.0)
+      psych (>= 4.0.0)
     securerandom (0.3.1)
     stringio (3.1.1)
     time (0.3.0)
@@ -61,6 +65,7 @@ PLATFORMS
 DEPENDENCIES
   nokogiri (~> 1.16)
   open-uri (~> 0.4.1)
+  rdoc (~> 6.7)
   wicked_pdf (~> 2.8)
   wkhtmltopdf (~> 0.1.2)
 
