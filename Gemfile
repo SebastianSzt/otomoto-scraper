@@ -13,3 +13,5 @@ gem "wicked_pdf", "~> 2.8"
 gem "wkhtmltopdf", "~> 0.1.2"
 
 gem "rdoc", "~> 6.7"
+
+gem "rspec", "~> 3.13"
