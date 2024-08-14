@@ -1,4 +1,4 @@
-# web-scraper
+# otomoto-scraper
 
 This project is a web scraper designed to extract car listings from a specified website. It collects data such as brand, model, engine capacity, and price. The data is then saved into a CSV file and a PDF report.
 
